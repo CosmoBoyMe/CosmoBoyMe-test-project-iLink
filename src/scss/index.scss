@@ -1,0 +1,339 @@
+@import './libs/reset.scss';
+@import './components/all.scss';
+
+.visible-hidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    border: 0; 
+    height: 1px;
+    width: 1px;
+    clip: rect(0 0 0 0); 
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #F8F3FF;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 64px;
+    padding-right: 176px;
+    overflow-x: hidden;
+}
+
+.title {
+    font-weight: 800;
+    line-height: 72px;
+    color: #303030;
+}
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 26px 0;
+    }
+
+    &__nav-list{
+        display: flex;
+    }
+
+    &__nav-item {
+        margin-right: 33px;
+    }
+    
+    &__nav-link {
+        font-size: 16px;
+        line-height: 19.5px;
+        font-weight: 500;
+        color: #8E43ED;
+    }
+    
+    &__nav-item:last-child {
+        margin-right: 0;
+    }
+}
+
+.about-you {
+    position: relative;
+    &__inner {
+        position: relative;
+        padding-top: 57px;
+        padding-bottom: 48px;
+        min-height: 750px;
+    }
+    
+    &__title {
+        margin-bottom: 41px;
+        font-size: 40px;
+    }
+    
+    &__rectangle-form-small {
+        position: absolute;
+        top: 215px;
+        left: 133px;
+        z-index: -1;
+        width: 116px;
+        height: 116px;
+        border-radius: 16px;
+        background-color: #F2E9FF;
+        transform: rotate(132deg);
+}
+
+    &__rectangle-form-medium {
+        position: absolute;
+        top: 95px;
+        left: -94px;
+        z-index: -1;
+        width: 167px;
+        height: 167px;
+        border-radius: 24px;
+        background-color: #F2E9FF;
+        transform: rotate(-109deg);
+    }
+
+    &__rectangle-form-large {
+        position: absolute;
+        top: 383px;
+        left: -108px;
+        z-index: -1;
+        width: 293px;
+        height: 293px;
+        border-radius: 32px;
+        background-color: #F2E9FF;
+        transform: rotate(-208deg);
+    }
+
+    &__rectangle-one {
+        position: absolute;
+        top: 9%;
+        right: -17.4%;
+        z-index: -1;
+        width: 14%;
+        height: 22%;
+        border-radius: 18%;
+        background-color: #8E43ED;
+        transform: rotate(15deg);
+    }
+
+    &__rectangle-two {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        z-index: -1;
+        width: 116px;
+        height: 116px;
+        border-radius: 16px;
+        background-color: #E0CFF8;
+        transform: rotate(-42.2deg);
+    }
+
+    &__rectangle-three {
+        position: absolute;
+        top: 48%;
+        right: -19%;
+        z-index: -1;
+        width: 294px;
+        height: 294px;
+        border-radius: 32px;
+        background-color: #F18BC3;
+        transform: rotate(-59deg);
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin: 0 14px;
+        padding: 0;
+        max-width: 375px;
+    }
+    
+    .header {
+        &__inner{
+            padding: 17px 0;
+        }
+    
+        &__logo{
+            margin: 0 auto;
+            height: 30px;
+        }
+    
+        &__logo-img {
+            height: 30px;
+        }
+    
+        &__nav {
+            display: none;
+        }
+    }
+
+    .profile {
+        border-radius: 0;
+        &__inner {
+            padding: 25px 0 44px 0;
+        }
+    
+        &__user-name {
+            margin-top: 25px;
+            margin-bottom: 16px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+    
+        &__info {
+            margin-bottom: 31px;
+        }
+    
+        &__info-item {
+            display: flex;
+            flex-direction: column;
+            margin-right: 35px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+
+        &__info-label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__info-value {
+            font-style: 14px;
+            line-height: 18px;
+        }
+    
+        &__title {
+            margin-bottom: 16px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    
+        &__text {
+            font-size: 15px;
+            line-height: 24px;
+        }
+    
+        &__rectangle-one {
+            left: 89%;
+            top: 307px;
+            width: 9%;
+            height: 8%;
+            border-radius: 24%;
+            transform: rotate(202deg);
+        }
+        &__rectangle-two {
+            top: 89%;
+            left: 81%;
+            width: 16%;
+            height: 14%;
+            border-radius: 24%;
+            transform: rotate(50deg);
+        }
+    }
+
+    .about-you {
+        &__inner {
+            padding-top: 40px;
+        }
+    
+        &__title{
+            margin-bottom: 40px;
+            font-size: 32px;
+            line-height: 41px;
+        }
+    
+        &__rectangle-one {
+            top: 7.4%;
+            right: 18%;
+            width: 32px;
+            height: 32px;
+            border-radius: 24%;
+    
+            border-radius: 10px;
+        }
+    
+        &__rectangle-two{
+            display: none;
+        }
+    
+        &__rectangle-three {
+            top: 3%;
+            right: 3%;
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+        }
+        &__rectangles-form {
+            display: none;
+        }
+    }
+
+    .form {
+        &_item {
+            margin-right: 0;
+            width: 100%;
+        }
+    
+        &__item-select {
+            width: 100%;
+        }
+    
+        &__file-item {
+            margin-right: 0;
+            width: 100%;
+        }
+    
+        &__document-row {
+            margin-top: 0;
+            padding: 27.5px 64px;
+        }
+    
+        &__document-label::after{
+            margin-top: 16px;
+            margin-left: 0;
+            padding: 20px 38px;
+            line-height: 24px;
+        }
+    }
+
+    .slider {
+        &__container{
+            align-items: flex-end;
+            padding: 32px 14px;
+        }
+    
+        &__img{
+            border-radius: 24px;
+        }
+    
+        &__info {
+            max-width: 254px;
+        }
+    
+        &__info-title{
+            margin-bottom: 16px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+    
+        &__info-text {
+            line-height: 24px;
+            font-size: 15px;
+        }
+        &__arrows {
+            padding-bottom: 50px;
+            padding-left: 32px;
+            padding-right: 49px;
+        }
+    }
+}
